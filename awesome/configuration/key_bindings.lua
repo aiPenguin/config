@@ -248,8 +248,20 @@ end)
 -- user added
 
 awful.keyboard.append_global_keybindings({
+	-- luancher
 	awful.key({ vars.modkey }, "d", function()
-    awful.spawn("rofi -show-icons -show drun")
+		awful.spawn("rofi -show-icons -show drun")
 	end, { description = "run rofi", group = "launcher" }),
+
+	-- audio
+	awful.key({}, "XF86AudioRaiseVolume", function()
+		awful.spawn("amixer sset Master 7%+")
+	end, { description = "increase volume by 7%", group = "audio" }),
+	awful.key({}, "XF86AudioLowerVolume", function()
+		awful.spawn("amixer sset Master 7%-")
+	end, { description = "decrease volume by 7%", group = "audio" }),
+	awful.key({}, "XF86AudioMute", function()
+		awful.spawn("amixer sset Master toggle")
+	end, { description = "toggle mute", group = "audio" }),
 })
 -- }}}
