@@ -1,2 +1,8 @@
-nvim/
+# Ignore everything
+*
 
+# Except
+!alacritty/
+!awesome/
+!ranger/
+!rofi/
