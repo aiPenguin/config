@@ -1,9 +1,12 @@
 # Ignore everything
-*
+/*
 
-# Except
-!alacritty/
-!awesome/
-!ranger/
-!rofi/
+# Whitelist files in the root
+!.gitignore
 !README.md
+
+# Whitelist directories in the root
+!alacritty
+!awesome
+!ranger
+!rofi
